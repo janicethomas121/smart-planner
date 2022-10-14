@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Planner</title>
+</head>
+<body>
+    <h1>Welcome to your Smart Planner!</h1>
+    <center>What's your schedule today?</center>
+    <center>
+        <button class="button button1">Generate Schedule</button>
+    </center>
+    <div style = "overflow-x:auto;">
+        <table> 
+            <colgroup>
+                <col span="2" style="background-color: #D6EEEE">
+            </colgroup>
+            <tr>
+                <th style="color: #000;">Time</th>
+                <th style="color: #000;">Activity</th>
+            </tr>
+            <tr>
+                <td style="color: #000;">1</td>
+                <th style="color: #000;"></th>
+            </tr>
+            <tr>
+                <td style="color: #000;">2</td>
+                <th style="color: #000;"></th>
+            </tr>
+            <tr>
+                <td style="color: #000;">3</td>
+                <th style="color: #000;"></th>
+            </tr>
+            <tr>
+                <td style="color: #000;">4</td>
+                <th style="color: #000;"></th>
+            </tr>
+            <tr>
+                <td style="color: #000;">5</td>
+                <th style="color: #000;"></th>
+            </tr>
+            <tr>
+                <td style="color: #000;">6</td>
+                <th style="color: #000;"></th>
+            </tr>
+            <tr>
+                <td style="color: #000;">7</td>
+                <th style="color: #000;"></th>
+            </tr>
+            <tr>
+                <td style="color: #000;">8</td>
+                <th style="color: #000;"></th>
+            </tr>
+            <tr>
+                <td style="color: #000;">9</td>
+                <th style="color: #000;"></th>
+            </tr>
+            <tr>
+                <td style="color: #000;">10</td>
+                <th style="color: #000;"></th>
+            </tr>
+        </table>
+    
+    </div>
+   
+    <div style = "overflow-x:auto;">
+        <table> 
+            <colgroup>
+                <col span="2" style="background-color: #D6EEEE">
+            </colgroup>
+            <tr>
+                <th style="color: #000;">To-Do</th>
+                <th style="color: #000;">Approximate Time Required</th>
+            </tr>
+            <tr>
+                <td style="color: #000;">1</td>
+                <th style="color: #000;"></th>
+            </tr>
+            <tr>
+                <td style="color: #000;">2</td>
+                <th style="color: #000;"></th>
+            </tr>
+            <tr>
+                <td style="color: #000;">3</td>
+                <th style="color: #000;"></th>
+            </tr>
+            <tr>
+                <td style="color: #000;">4</td>
+                <th style="color: #000;"></th>
+            </tr>
+            <tr>
+                <td style="color: #000;">5</td>
+                <th style="color: #000;"></th>
+            </tr>
+            <tr>
+                <td style="color: #000;">6</td>
+                <th style="color: #000;"></th>
+            </tr>
+            <tr>
+                <td style="color: #000;">7</td>
+                <th style="color: #000;"></th>
+            </tr>
+            <tr>
+                <td style="color: #000;">8</td>
+                <th style="color: #000;"></th>
+            </tr>
+            <tr>
+                <td style="color: #000;">9</td>
+                <th style="color: #000;"></th>
+            </tr>
+            <tr>
+                <td style="color: #000;">10</td>
+                <th style="color: #000;"></th>
+            </tr>
+        </table>
+    </div>
+
+    
+    <button class="button button1">Log In</button>
+    <button class="button button1">Shuffle</button>
+</body>
+<style>
+    
+    .button1 {
+        background-color: white;
+        color: black;
+        border: 2px solid #4CAF50;
+      }
+      
+      .button1:hover {
+        background-color: #4CAF50;
+        color: white;
+      }
+    </style>
+</html>
