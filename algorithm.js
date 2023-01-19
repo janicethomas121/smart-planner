@@ -4,6 +4,7 @@ let storageArray = [];
 let schedule1 = [];
 let schedule2 = [];
 
+const jquery = require('jquery');
 // upload JavaScript library 'MomentJS' for easier displaying of time and date
 var moment = require('moment');
 
@@ -71,7 +72,7 @@ function renderTasks(){
 
 //storing user tasks to local storage
 function setTasks(){
-    localStorage.setItem("Tasks", JSON.stringify(schedule1));
+    window.localStorage.setItem("Tasks", JSON.stringify(schedule1));
 }
 
 //button click event stores user input in an array and generates a potential schedule
@@ -97,6 +98,10 @@ function organizeSchedule(){
 } //else if () {} access dropdown elements using jQUery
 }
 
+/*jquery().ready(function($){
+renderTasks();
+});
+*/
 
 
 //<button onclick ="document.getElementById('demo').innerHTML = Date()">The time is?</button>

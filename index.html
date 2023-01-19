@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Planner</title>
+</head>
+    <body>
+        <script type="text/JavaScript" src="js/algorithm.js"></script>
+    <h1>Welcome to your Smart Planner!</h1>
+    <center>What's your schedule today?</center>
+    <center>
+        <button class="button button1">Generate Schedule</button>
+    </center>
+    <div style = "overflow-x:auto;">
+        <table> 
+            <colgroup>
+                <col span="3" style="background-color: #D6EEEE">
+            </colgroup>
+            <tr>
+                <th style="color: #000;">Activity</th>
+                <th style="color: #000;">Start Time</th>
+                <th style="color: #000;">Duration</th>
+            </tr>
+            <tr>
+                <th style="color: #000;"></th>
+                <td style="color: #000;">
+                    <label for="times">Hour:</label>
+                    <select name="times" id="times">
+                      <option value="6">1</option>
+                      <option value="7">2</option>
+                      <option value="8">3</option>
+                      <option value="9">4</option>
+                      <option value="10">5</option>
+                      <option value="11">6</option>
+                      <option value="12">7</option>
+                      <option value="13">8</option>
+                      <option value="14">9</option>
+                      <option value="15">10</option>
+                      <option value="16">11</option>
+                      <option value="17">12</option>
+                      <option value="18">13</option>
+                      <option value="19">14</option>
+                      <option value="20">15</option>
+                      <option value="21">16</option>
+                      <option value="22">17</option>
+                      <option value="23">18</option>
+                      <option value="24">19</option>
+                      <option value="1">20</option>
+                      <option value="2">21</option>
+                      <option value="3">22</option>
+                      <option value="4">23</option>
+                      <option value="5">24</option>
+                    </select>
+                    <label for="times">Minutes:</label>
+                    <select name="times" id="times">
+                      <option value="11:00">00</option>
+                      <option value="8:00">05</option>
+                      <option value="9:00">10</option>
+                      <option value="10:00">15</option>
+                      <option value="11:00">20</option>
+                      <option value="11:00">25</option>
+                      <option value="11:00">30</option>
+                      <option value="11:00">35</option>
+                      <option value="11:00">40</option>
+                      <option value="11:00">45</option>
+                      <option value="11:00">50</option>
+                      <option value="11:00">55</option>
+                    </select>
+                </td>
+                <td style="color: #000;">
+                    <label for="times">Hours:</label>
+                    <select name="times" id="times">
+                        <option value="6">1</option>
+                        <option value="7">2</option>
+                        <option value="8">3</option>
+                        <option value="9">4</option>
+                        <option value="10">5</option>
+                        <option value="11">6</option>
+                        <option value="12">7</option>
+                        <option value="13">8</option>
+                        <option value="14">9</option>
+                        <option value="15">10</option>
+                        <option value="16">11</option>
+                        <option value="17">12</option>
+                        <option value="18">13</option>
+                        <option value="19">14</option>
+                        <option value="20">15</option>
+                        <option value="21">16</option>
+                        <option value="22">17</option>
+                        <option value="23">18</option>
+                        <option value="24">19</option>
+                        <option value="1">20</option>
+                        <option value="2">21</option>
+                        <option value="3">22</option>
+                        <option value="4">23</option>
+                        <option value="5">24</option>
+                    </select>
+                    <label for="times">Minutes:</label>
+                    <select name="times" id="times">
+                        <option value="11:00">00</option>
+                        <option value="8:00">05</option>
+                        <option value="9:00">10</option>
+                        <option value="10:00">15</option>
+                        <option value="11:00">20</option>
+                        <option value="11:00">25</option>
+                        <option value="11:00">30</option>
+                        <option value="11:00">35</option>
+                        <option value="11:00">40</option>
+                        <option value="11:00">45</option>
+                        <option value="11:00">50</option>
+                        <option value="11:00">55</option>
+                      </select>
+                </td>
+            </tr>
+            <tr>
+                <th style="color: #000;"></th>
+                <td style="color: #000;">
+                    <label for="times">Hour:</label>
+                    <select name="times" id="times">
+                      <option value="6">1</option>
+                      <option value="7">2</option>
+                      <option value="8">3</option>
+                      <option value="9">4</option>
+                      <option value="10">5</option>
+                      <option value="11">6</option>
+                      <option value="12">7</option>
+                      <option value="13">8</option>
+                      <option value="14">9</option>
+                      <option value="15">10</option>
+                      <option value="16">11</option>
+                      <option value="17">12</option>
+                      <option value="18">13</option>
+                      <option value="19">14</option>
+                      <option value="20">15</option>
+                      <option value="21">16</option>
+                      <option value="22">17</option>
+                      <option value="23">18</option>
+                      <option value="24">19</option>
+                      <option value="1">20</option>
+                      <option value="2">21</option>
+                      <option value="3">22</option>
+                      <option value="4">23</option>
+                      <option value="5">24</option>
+                    </select>
+                    <label for="times">Minutes:</label>
+                    <select name="times" id="times">
+                      <option value="11:00">00</option>
+                      <option value="8:00">05</option>
+                      <option value="9:00">10</option>
+                      <option value="10:00">15</option>
+                      <option value="11:00">20</option>
+                      <option value="11:00">25</option>
+                      <option value="11:00">30</option>
+                      <option value="11:00">35</option>
+                      <option value="11:00">40</option>
+                      <option value="11:00">45</option>
+                      <option value="11:00">50</option>
+                      <option value="11:00">55</option>
+                    </select>
+                </td>
+                <td style="color: #000;">
+                    <label for="times">Hours:</label>
+                    <select name="times" id="times">
+                        <option value="6">1</option>
+                        <option value="7">2</option>
+                        <option value="8">3</option>
+                        <option value="9">4</option>
+                        <option value="10">5</option>
+                        <option value="11">6</option>
+                        <option value="12">7</option>
+                        <option value="13">8</option>
+                        <option value="14">9</option>
+                        <option value="15">10</option>
+                        <option value="16">11</option>
+                        <option value="17">12</option>
+                        <option value="18">13</option>
+                        <option value="19">14</option>
+                        <option value="20">15</option>
+                        <option value="21">16</option>
+                        <option value="22">17</option>
+                        <option value="23">18</option>
+                        <option value="24">19</option>
+                        <option value="1">20</option>
+                        <option value="2">21</option>
+                        <option value="3">22</option>
+                        <option value="4">23</option>
+                        <option value="5">24</option>
+                    </select>
+                    <label for="times">Minutes:</label>
+                    <select name="times" id="times">
+                        <option value="11:00">00</option>
+                        <option value="8:00">05</option>
+                        <option value="9:00">10</option>
+                        <option value="10:00">15</option>
+                        <option value="11:00">20</option>
+                        <option value="11:00">25</option>
+                        <option value="11:00">30</option>
+                        <option value="11:00">35</option>
+                        <option value="11:00">40</option>
+                        <option value="11:00">45</option>
+                        <option value="11:00">50</option>
+                        <option value="11:00">55</option>
+                      </select>
+                </td>
+            </tr>
+            <tr>
+                <th style="color: #000;"></th>
+                <td style="color: #000;">
+                    <label for="times">Hour:</label>
+                    <select name="times" id="times">
+                      <option value="6">1</option>
+                      <option value="7">2</option>
+                      <option value="8">3</option>
+                      <option value="9">4</option>
+                      <option value="10">5</option>
+                      <option value="11">6</option>
+                      <option value="12">7</option>
+                      <option value="13">8</option>
+                      <option value="14">9</option>
+                      <option value="15">10</option>
+                      <option value="16">11</option>
+                      <option value="17">12</option>
+                      <option value="18">13</option>
+                      <option value="19">14</option>
+                      <option value="20">15</option>
+                      <option value="21">16</option>
+                      <option value="22">17</option>
+                      <option value="23">18</option>
+                      <option value="24">19</option>
+                      <option value="1">20</option>
+                      <option value="2">21</option>
+                      <option value="3">22</option>
+                      <option value="4">23</option>
+                      <option value="5">24</option>
+                    </select>
+                    <label for="times">Minutes:</label>
+                    <select name="times" id="times">
+                      <option value="11:00">00</option>
+                      <option value="8:00">05</option>
+                      <option value="9:00">10</option>
+                      <option value="10:00">15</option>
+                      <option value="11:00">20</option>
+                      <option value="11:00">25</option>
+                      <option value="11:00">30</option>
+                      <option value="11:00">35</option>
+                      <option value="11:00">40</option>
+                      <option value="11:00">45</option>
+                      <option value="11:00">50</option>
+                      <option value="11:00">55</option>
+                    </select>
+                </td>
+                <td style="color: #000;">
+                    <label for="times">Hours:</label>
+                    <select name="times" id="times">
+                        <option value="6">1</option>
+                        <option value="7">2</option>
+                        <option value="8">3</option>
+                        <option value="9">4</option>
+                        <option value="10">5</option>
+                        <option value="11">6</option>
+                        <option value="12">7</option>
+                        <option value="13">8</option>
+                        <option value="14">9</option>
+                        <option value="15">10</option>
+                        <option value="16">11</option>
+                        <option value="17">12</option>
+                        <option value="18">13</option>
+                        <option value="19">14</option>
+                        <option value="20">15</option>
+                        <option value="21">16</option>
+                        <option value="22">17</option>
+                        <option value="23">18</option>
+                        <option value="24">19</option>
+                        <option value="1">20</option>
+                        <option value="2">21</option>
+                        <option value="3">22</option>
+                        <option value="4">23</option>
+                        <option value="5">24</option>
+                    </select>
+                    <label for="times">Minutes:</label>
+                    <select name="times" id="times">
+                        <option value="11:00">00</option>
+                        <option value="8:00">05</option>
+                        <option value="9:00">10</option>
+                        <option value="10:00">15</option>
+                        <option value="11:00">20</option>
+                        <option value="11:00">25</option>
+                        <option value="11:00">30</option>
+                        <option value="11:00">35</option>
+                        <option value="11:00">40</option>
+                        <option value="11:00">45</option>
+                        <option value="11:00">50</option>
+                        <option value="11:00">55</option>
+                      </select>
+                </td>
+            </tr>
+            <tr>
+                <th style="color: #000;"></th>
+                <td style="color: #000;">
+                    <label for="times">Hour:</label>
+                    <select name="times" id="times">
+                      <option value="6">1</option>
+                      <option value="7">2</option>
+                      <option value="8">3</option>
+                      <option value="9">4</option>
+                      <option value="10">5</option>
+                      <option value="11">6</option>
+                      <option value="12">7</option>
+                      <option value="13">8</option>
+                      <option value="14">9</option>
+                      <option value="15">10</option>
+                      <option value="16">11</option>
+                      <option value="17">12</option>
+                      <option value="18">13</option>
+                      <option value="19">14</option>
+                      <option value="20">15</option>
+                      <option value="21">16</option>
+                      <option value="22">17</option>
+                      <option value="23">18</option>
+                      <option value="24">19</option>
+                      <option value="1">20</option>
+                      <option value="2">21</option>
+                      <option value="3">22</option>
+                      <option value="4">23</option>
+                      <option value="5">24</option>
+                    </select>
+                    <label for="times">Minutes:</label>
+                    <select name="times" id="times">
+                      <option value="11:00">00</option>
+                      <option value="8:00">05</option>
+                      <option value="9:00">10</option>
+                      <option value="10:00">15</option>
+                      <option value="11:00">20</option>
+                      <option value="11:00">25</option>
+                      <option value="11:00">30</option>
+                      <option value="11:00">35</option>
+                      <option value="11:00">40</option>
+                      <option value="11:00">45</option>
+                      <option value="11:00">50</option>
+                      <option value="11:00">55</option>
+                    </select>
+                </td>
+                <td style="color: #000;">
+                    <label for="times">Hours:</label>
+                    <select name="times" id="times">
+                        <option value="6">1</option>
+                        <option value="7">2</option>
+                        <option value="8">3</option>
+                        <option value="9">4</option>
+                        <option value="10">5</option>
+                        <option value="11">6</option>
+                        <option value="12">7</option>
+                        <option value="13">8</option>
+                        <option value="14">9</option>
+                        <option value="15">10</option>
+                        <option value="16">11</option>
+                        <option value="17">12</option>
+                        <option value="18">13</option>
+                        <option value="19">14</option>
+                        <option value="20">15</option>
+                        <option value="21">16</option>
+                        <option value="22">17</option>
+                        <option value="23">18</option>
+                        <option value="24">19</option>
+                        <option value="1">20</option>
+                        <option value="2">21</option>
+                        <option value="3">22</option>
+                        <option value="4">23</option>
+                        <option value="5">24</option>
+                    </select>
+                    <label for="times">Minutes:</label>
+                    <select name="times" id="times">
+                        <option value="11:00">00</option>
+                        <option value="8:00">05</option>
+                        <option value="9:00">10</option>
+                        <option value="10:00">15</option>
+                        <option value="11:00">20</option>
+                        <option value="11:00">25</option>
+                        <option value="11:00">30</option>
+                        <option value="11:00">35</option>
+                        <option value="11:00">40</option>
+                        <option value="11:00">45</option>
+                        <option value="11:00">50</option>
+                        <option value="11:00">55</option>
+                      </select>
+                </td>
+            </tr>
+            <tr>
+                <th style="color: #000;"></th>
+                <td style="color: #000;">
+                    <label for="times">Hour:</label>
+                    <select name="times" id="times">
+                      <option value="6">1</option>
+                      <option value="7">2</option>
+                      <option value="8">3</option>
+                      <option value="9">4</option>
+                      <option value="10">5</option>
+                      <option value="11">6</option>
+                      <option value="12">7</option>
+                      <option value="13">8</option>
+                      <option value="14">9</option>
+                      <option value="15">10</option>
+                      <option value="16">11</option>
+                      <option value="17">12</option>
+                      <option value="18">13</option>
+                      <option value="19">14</option>
+                      <option value="20">15</option>
+                      <option value="21">16</option>
+                      <option value="22">17</option>
+                      <option value="23">18</option>
+                      <option value="24">19</option>
+                      <option value="1">20</option>
+                      <option value="2">21</option>
+                      <option value="3">22</option>
+                      <option value="4">23</option>
+                      <option value="5">24</option>
+                    </select>
+                    <label for="times">Minutes:</label>
+                    <select name="times" id="times">
+                      <option value="11:00">00</option>
+                      <option value="8:00">05</option>
+                      <option value="9:00">10</option>
+                      <option value="10:00">15</option>
+                      <option value="11:00">20</option>
+                      <option value="11:00">25</option>
+                      <option value="11:00">30</option>
+                      <option value="11:00">35</option>
+                      <option value="11:00">40</option>
+                      <option value="11:00">45</option>
+                      <option value="11:00">50</option>
+                      <option value="11:00">55</option>
+                    </select>
+                </td>
+                <td style="color: #000;">
+                    <label for="times">Hours:</label>
+                    <select name="times" id="times">
+                        <option value="6">1</option>
+                        <option value="7">2</option>
+                        <option value="8">3</option>
+                        <option value="9">4</option>
+                        <option value="10">5</option>
+                        <option value="11">6</option>
+                        <option value="12">7</option>
+                        <option value="13">8</option>
+                        <option value="14">9</option>
+                        <option value="15">10</option>
+                        <option value="16">11</option>
+                        <option value="17">12</option>
+                        <option value="18">13</option>
+                        <option value="19">14</option>
+                        <option value="20">15</option>
+                        <option value="21">16</option>
+                        <option value="22">17</option>
+                        <option value="23">18</option>
+                        <option value="24">19</option>
+                        <option value="1">20</option>
+                        <option value="2">21</option>
+                        <option value="3">22</option>
+                        <option value="4">23</option>
+                        <option value="5">24</option>
+                    </select>
+                    <label for="times">Minutes:</label>
+                    <select name="times" id="times">
+                        <option value="11:00">00</option>
+                        <option value="8:00">05</option>
+                        <option value="9:00">10</option>
+                        <option value="10:00">15</option>
+                        <option value="11:00">20</option>
+                        <option value="11:00">25</option>
+                        <option value="11:00">30</option>
+                        <option value="11:00">35</option>
+                        <option value="11:00">40</option>
+                        <option value="11:00">45</option>
+                        <option value="11:00">50</option>
+                        <option value="11:00">55</option>
+                      </select>
+                </td>
+            </tr>
+            <tr>
+                <th style="color: #000;"></th>
+                <td style="color: #000;">
+                    <label for="times">Hour:</label>
+                    <select name="times" id="times">
+                      <option value="6">1</option>
+                      <option value="7">2</option>
+                      <option value="8">3</option>
+                      <option value="9">4</option>
+                      <option value="10">5</option>
+                      <option value="11">6</option>
+                      <option value="12">7</option>
+                      <option value="13">8</option>
+                      <option value="14">9</option>
+                      <option value="15">10</option>
+                      <option value="16">11</option>
+                      <option value="17">12</option>
+                      <option value="18">13</option>
+                      <option value="19">14</option>
+                      <option value="20">15</option>
+                      <option value="21">16</option>
+                      <option value="22">17</option>
+                      <option value="23">18</option>
+                      <option value="24">19</option>
+                      <option value="1">20</option>
+                      <option value="2">21</option>
+                      <option value="3">22</option>
+                      <option value="4">23</option>
+                      <option value="5">24</option>
+                    </select>
+                    <label for="times">Minutes:</label>
+                    <select name="times" id="times">
+                      <option value="11:00">00</option>
+                      <option value="8:00">05</option>
+                      <option value="9:00">10</option>
+                      <option value="10:00">15</option>
+                      <option value="11:00">20</option>
+                      <option value="11:00">25</option>
+                      <option value="11:00">30</option>
+                      <option value="11:00">35</option>
+                      <option value="11:00">40</option>
+                      <option value="11:00">45</option>
+                      <option value="11:00">50</option>
+                      <option value="11:00">55</option>
+                    </select>
+                </td>
+                <td style="color: #000;">
+                    <label for="times">Hours:</label>
+                    <select name="times" id="times">
+                        <option value="6">1</option>
+                        <option value="7">2</option>
+                        <option value="8">3</option>
+                        <option value="9">4</option>
+                        <option value="10">5</option>
+                        <option value="11">6</option>
+                        <option value="12">7</option>
+                        <option value="13">8</option>
+                        <option value="14">9</option>
+                        <option value="15">10</option>
+                        <option value="16">11</option>
+                        <option value="17">12</option>
+                        <option value="18">13</option>
+                        <option value="19">14</option>
+                        <option value="20">15</option>
+                        <option value="21">16</option>
+                        <option value="22">17</option>
+                        <option value="23">18</option>
+                        <option value="24">19</option>
+                        <option value="1">20</option>
+                        <option value="2">21</option>
+                        <option value="3">22</option>
+                        <option value="4">23</option>
+                        <option value="5">24</option>
+                    </select>
+                    <label for="times">Minutes:</label>
+                    <select name="times" id="times">
+                        <option value="11:00">00</option>
+                        <option value="8:00">05</option>
+                        <option value="9:00">10</option>
+                        <option value="10:00">15</option>
+                        <option value="11:00">20</option>
+                        <option value="11:00">25</option>
+                        <option value="11:00">30</option>
+                        <option value="11:00">35</option>
+                        <option value="11:00">40</option>
+                        <option value="11:00">45</option>
+                        <option value="11:00">50</option>
+                        <option value="11:00">55</option>
+                      </select>
+                </td>
+            </tr>
+            <tr>
+                <th style="color: #000;"></th>
+                <td style="color: #000;">
+                    <label for="times">Hour:</label>
+                    <select name="times" id="times">
+                      <option value="6">1</option>
+                      <option value="7">2</option>
+                      <option value="8">3</option>
+                      <option value="9">4</option>
+                      <option value="10">5</option>
+                      <option value="11">6</option>
+                      <option value="12">7</option>
+                      <option value="13">8</option>
+                      <option value="14">9</option>
+                      <option value="15">10</option>
+                      <option value="16">11</option>
+                      <option value="17">12</option>
+                      <option value="18">13</option>
+                      <option value="19">14</option>
+                      <option value="20">15</option>
+                      <option value="21">16</option>
+                      <option value="22">17</option>
+                      <option value="23">18</option>
+                      <option value="24">19</option>
+                      <option value="1">20</option>
+                      <option value="2">21</option>
+                      <option value="3">22</option>
+                      <option value="4">23</option>
+                      <option value="5">24</option>
+                    </select>
+                    <label for="times">Minutes:</label>
+                    <select name="times" id="times">
+                      <option value="11:00">00</option>
+                      <option value="8:00">05</option>
+                      <option value="9:00">10</option>
+                      <option value="10:00">15</option>
+                      <option value="11:00">20</option>
+                      <option value="11:00">25</option>
+                      <option value="11:00">30</option>
+                      <option value="11:00">35</option>
+                      <option value="11:00">40</option>
+                      <option value="11:00">45</option>
+                      <option value="11:00">50</option>
+                      <option value="11:00">55</option>
+                    </select>
+                </td>
+                <td style="color: #000;">
+                    <label for="times">Hours:</label>
+                    <select name="times" id="times">
+                        <option value="6">1</option>
+                        <option value="7">2</option>
+                        <option value="8">3</option>
+                        <option value="9">4</option>
+                        <option value="10">5</option>
+                        <option value="11">6</option>
+                        <option value="12">7</option>
+                        <option value="13">8</option>
+                        <option value="14">9</option>
+                        <option value="15">10</option>
+                        <option value="16">11</option>
+                        <option value="17">12</option>
+                        <option value="18">13</option>
+                        <option value="19">14</option>
+                        <option value="20">15</option>
+                        <option value="21">16</option>
+                        <option value="22">17</option>
+                        <option value="23">18</option>
+                        <option value="24">19</option>
+                        <option value="1">20</option>
+                        <option value="2">21</option>
+                        <option value="3">22</option>
+                        <option value="4">23</option>
+                        <option value="5">24</option>
+                    </select>
+                    <label for="times">Minutes:</label>
+                    <select name="times" id="times">
+                        <option value="11:00">00</option>
+                        <option value="8:00">05</option>
+                        <option value="9:00">10</option>
+                        <option value="10:00">15</option>
+                        <option value="11:00">20</option>
+                        <option value="11:00">25</option>
+                        <option value="11:00">30</option>
+                        <option value="11:00">35</option>
+                        <option value="11:00">40</option>
+                        <option value="11:00">45</option>
+                        <option value="11:00">50</option>
+                        <option value="11:00">55</option>
+                      </select>
+                </td>
+            </tr>
+            <tr>
+                <th style="color: #000;"></th>
+                <td style="color: #000;">
+                    <label for="times">Hour:</label>
+                    <select name="times" id="times">
+                      <option value="6">1</option>
+                      <option value="7">2</option>
+                      <option value="8">3</option>
+                      <option value="9">4</option>
+                      <option value="10">5</option>
+                      <option value="11">6</option>
+                      <option value="12">7</option>
+                      <option value="13">8</option>
+                      <option value="14">9</option>
+                      <option value="15">10</option>
+                      <option value="16">11</option>
+                      <option value="17">12</option>
+                      <option value="18">13</option>
+                      <option value="19">14</option>
+                      <option value="20">15</option>
+                      <option value="21">16</option>
+                      <option value="22">17</option>
+                      <option value="23">18</option>
+                      <option value="24">19</option>
+                      <option value="1">20</option>
+                      <option value="2">21</option>
+                      <option value="3">22</option>
+                      <option value="4">23</option>
+                      <option value="5">24</option>
+                    </select>
+                    <label for="times">Minutes:</label>
+                    <select name="times" id="times">
+                      <option value="11:00">00</option>
+                      <option value="8:00">05</option>
+                      <option value="9:00">10</option>
+                      <option value="10:00">15</option>
+                      <option value="11:00">20</option>
+                      <option value="11:00">25</option>
+                      <option value="11:00">30</option>
+                      <option value="11:00">35</option>
+                      <option value="11:00">40</option>
+                      <option value="11:00">45</option>
+                      <option value="11:00">50</option>
+                      <option value="11:00">55</option>
+                    </select>
+                </td>
+                <td style="color: #000;">
+                    <label for="times">Hours:</label>
+                    <select name="times" id="times">
+                        <option value="6">1</option>
+                        <option value="7">2</option>
+                        <option value="8">3</option>
+                        <option value="9">4</option>
+                        <option value="10">5</option>
+                        <option value="11">6</option>
+                        <option value="12">7</option>
+                        <option value="13">8</option>
+                        <option value="14">9</option>
+                        <option value="15">10</option>
+                        <option value="16">11</option>
+                        <option value="17">12</option>
+                        <option value="18">13</option>
+                        <option value="19">14</option>
+                        <option value="20">15</option>
+                        <option value="21">16</option>
+                        <option value="22">17</option>
+                        <option value="23">18</option>
+                        <option value="24">19</option>
+                        <option value="1">20</option>
+                        <option value="2">21</option>
+                        <option value="3">22</option>
+                        <option value="4">23</option>
+                        <option value="5">24</option>
+                    </select>
+                    <label for="times">Minutes:</label>
+                    <select name="times" id="times">
+                        <option value="11:00">00</option>
+                        <option value="8:00">05</option>
+                        <option value="9:00">10</option>
+                        <option value="10:00">15</option>
+                        <option value="11:00">20</option>
+                        <option value="11:00">25</option>
+                        <option value="11:00">30</option>
+                        <option value="11:00">35</option>
+                        <option value="11:00">40</option>
+                        <option value="11:00">45</option>
+                        <option value="11:00">50</option>
+                        <option value="11:00">55</option>
+                      </select>
+                </td>
+            </tr>
+            <tr>
+                <th style="color: #000;"></th>
+                <td style="color: #000;">
+                    <label for="times">Hour:</label>
+                    <select name="times" id="times">
+                      <option value="6">1</option>
+                      <option value="7">2</option>
+                      <option value="8">3</option>
+                      <option value="9">4</option>
+                      <option value="10">5</option>
+                      <option value="11">6</option>
+                      <option value="12">7</option>
+                      <option value="13">8</option>
+                      <option value="14">9</option>
+                      <option value="15">10</option>
+                      <option value="16">11</option>
+                      <option value="17">12</option>
+                      <option value="18">13</option>
+                      <option value="19">14</option>
+                      <option value="20">15</option>
+                      <option value="21">16</option>
+                      <option value="22">17</option>
+                      <option value="23">18</option>
+                      <option value="24">19</option>
+                      <option value="1">20</option>
+                      <option value="2">21</option>
+                      <option value="3">22</option>
+                      <option value="4">23</option>
+                      <option value="5">24</option>
+                    </select>
+                    <label for="times">Minutes:</label>
+                    <select name="times" id="times">
+                      <option value="11:00">00</option>
+                      <option value="8:00">05</option>
+                      <option value="9:00">10</option>
+                      <option value="10:00">15</option>
+                      <option value="11:00">20</option>
+                      <option value="11:00">25</option>
+                      <option value="11:00">30</option>
+                      <option value="11:00">35</option>
+                      <option value="11:00">40</option>
+                      <option value="11:00">45</option>
+                      <option value="11:00">50</option>
+                      <option value="11:00">55</option>
+                    </select>
+                </td>
+                <td style="color: #000;">
+                    <label for="times">Hours:</label>
+                    <select name="times" id="times">
+                        <option value="6">1</option>
+                        <option value="7">2</option>
+                        <option value="8">3</option>
+                        <option value="9">4</option>
+                        <option value="10">5</option>
+                        <option value="11">6</option>
+                        <option value="12">7</option>
+                        <option value="13">8</option>
+                        <option value="14">9</option>
+                        <option value="15">10</option>
+                        <option value="16">11</option>
+                        <option value="17">12</option>
+                        <option value="18">13</option>
+                        <option value="19">14</option>
+                        <option value="20">15</option>
+                        <option value="21">16</option>
+                        <option value="22">17</option>
+                        <option value="23">18</option>
+                        <option value="24">19</option>
+                        <option value="1">20</option>
+                        <option value="2">21</option>
+                        <option value="3">22</option>
+                        <option value="4">23</option>
+                        <option value="5">24</option>
+                    </select>
+                    <label for="times">Minutes:</label>
+                    <select name="times" id="times">
+                        <option value="11:00">00</option>
+                        <option value="8:00">05</option>
+                        <option value="9:00">10</option>
+                        <option value="10:00">15</option>
+                        <option value="11:00">20</option>
+                        <option value="11:00">25</option>
+                        <option value="11:00">30</option>
+                        <option value="11:00">35</option>
+                        <option value="11:00">40</option>
+                        <option value="11:00">45</option>
+                        <option value="11:00">50</option>
+                        <option value="11:00">55</option>
+                      </select>
+                </td>
+            </tr>
+            <tr>
+                <th style="color: #000;"></th>
+                <td style="color: #000;">
+                    <label for="times">Hour:</label>
+                    <select name="times" id="times">
+                      <option value="6">1</option>
+                      <option value="7">2</option>
+                      <option value="8">3</option>
+                      <option value="9">4</option>
+                      <option value="10">5</option>
+                      <option value="11">6</option>
+                      <option value="12">7</option>
+                      <option value="13">8</option>
+                      <option value="14">9</option>
+                      <option value="15">10</option>
+                      <option value="16">11</option>
+                      <option value="17">12</option>
+                      <option value="18">13</option>
+                      <option value="19">14</option>
+                      <option value="20">15</option>
+                      <option value="21">16</option>
+                      <option value="22">17</option>
+                      <option value="23">18</option>
+                      <option value="24">19</option>
+                      <option value="1">20</option>
+                      <option value="2">21</option>
+                      <option value="3">22</option>
+                      <option value="4">23</option>
+                      <option value="5">24</option>
+                    </select>
+                    <label for="times">Minutes:</label>
+                    <select name="times" id="times">
+                      <option value="11:00">00</option>
+                      <option value="8:00">05</option>
+                      <option value="9:00">10</option>
+                      <option value="10:00">15</option>
+                      <option value="11:00">20</option>
+                      <option value="11:00">25</option>
+                      <option value="11:00">30</option>
+                      <option value="11:00">35</option>
+                      <option value="11:00">40</option>
+                      <option value="11:00">45</option>
+                      <option value="11:00">50</option>
+                      <option value="11:00">55</option>
+                    </select>
+                </td>
+                <td style="color: #000;">
+                    <label for="times">Hours:</label>
+                    <select name="times" id="times">
+                        <option value="6">1</option>
+                        <option value="7">2</option>
+                        <option value="8">3</option>
+                        <option value="9">4</option>
+                        <option value="10">5</option>
+                        <option value="11">6</option>
+                        <option value="12">7</option>
+                        <option value="13">8</option>
+                        <option value="14">9</option>
+                        <option value="15">10</option>
+                        <option value="16">11</option>
+                        <option value="17">12</option>
+                        <option value="18">13</option>
+                        <option value="19">14</option>
+                        <option value="20">15</option>
+                        <option value="21">16</option>
+                        <option value="22">17</option>
+                        <option value="23">18</option>
+                        <option value="24">19</option>
+                        <option value="1">20</option>
+                        <option value="2">21</option>
+                        <option value="3">22</option>
+                        <option value="4">23</option>
+                        <option value="5">24</option>
+                    </select>
+                    <label for="times">Minutes:</label>
+                    <select name="times" id="times">
+                        <option value="11:00">00</option>
+                        <option value="8:00">05</option>
+                        <option value="9:00">10</option>
+                        <option value="10:00">15</option>
+                        <option value="11:00">20</option>
+                        <option value="11:00">25</option>
+                        <option value="11:00">30</option>
+                        <option value="11:00">35</option>
+                        <option value="11:00">40</option>
+                        <option value="11:00">45</option>
+                        <option value="11:00">50</option>
+                        <option value="11:00">55</option>
+                      </select>
+                </td>
+            </tr>
+        </table>
+    </div>
+   
+    <div style = "overflow-x:auto;">
+        <table> 
+            <colgroup>
+                <col span="3" style="background-color: #D6EEEE">
+            </colgroup>
+            <tr>
+                <th style="color: #000;">To-Do</th>
+                <th style="color: #000;">Approximate Time Required</th>
+            </tr>
+            <tr>
+                <td style="color: #000;">1</td>
+                <td style="color: #000;">
+                    <label for="times">Hours:</label>
+                    <select name="times" id="times">
+                        <option value="6">1</option>
+                        <option value="7">2</option>
+                        <option value="8">3</option>
+                        <option value="9">4</option>
+                        <option value="10">5</option>
+                        <option value="11">6</option>
+                        <option value="12">7</option>
+                        <option value="13">8</option>
+                        <option value="14">9</option>
+                        <option value="15">10</option>
+                        <option value="16">11</option>
+                        <option value="17">12</option>
+                        <option value="18">13</option>
+                        <option value="19">14</option>
+                        <option value="20">15</option>
+                        <option value="21">16</option>
+                        <option value="22">17</option>
+                        <option value="23">18</option>
+                        <option value="24">19</option>
+                        <option value="1">20</option>
+                        <option value="2">21</option>
+                        <option value="3">22</option>
+                        <option value="4">23</option>
+                        <option value="5">24</option>
+                    </select>
+                    <label for="times">Minutes:</label>
+                    <select name="times" id="times">
+                        <option value="11:00">00</option>
+                        <option value="8:00">05</option>
+                        <option value="9:00">10</option>
+                        <option value="10:00">15</option>
+                        <option value="11:00">20</option>
+                        <option value="11:00">25</option>
+                        <option value="11:00">30</option>
+                        <option value="11:00">35</option>
+                        <option value="11:00">40</option>
+                        <option value="11:00">45</option>
+                        <option value="11:00">50</option>
+                        <option value="11:00">55</option>
+                      </select>
+                </td>
+            </tr>
+            <tr>
+                <td style="color: #000;">2</td>
+                <td style="color: #000;">
+                    <label for="times">Hours:</label>
+                    <select name="times" id="times">
+                        <option value="6">1</option>
+                        <option value="7">2</option>
+                        <option value="8">3</option>
+                        <option value="9">4</option>
+                        <option value="10">5</option>
+                        <option value="11">6</option>
+                        <option value="12">7</option>
+                        <option value="13">8</option>
+                        <option value="14">9</option>
+                        <option value="15">10</option>
+                        <option value="16">11</option>
+                        <option value="17">12</option>
+                        <option value="18">13</option>
+                        <option value="19">14</option>
+                        <option value="20">15</option>
+                        <option value="21">16</option>
+                        <option value="22">17</option>
+                        <option value="23">18</option>
+                        <option value="24">19</option>
+                        <option value="1">20</option>
+                        <option value="2">21</option>
+                        <option value="3">22</option>
+                        <option value="4">23</option>
+                        <option value="5">24</option>
+                    </select>
+                    <label for="times">Minutes:</label>
+                    <select name="times" id="times">
+                        <option value="11:00">00</option>
+                        <option value="8:00">05</option>
+                        <option value="9:00">10</option>
+                        <option value="10:00">15</option>
+                        <option value="11:00">20</option>
+                        <option value="11:00">25</option>
+                        <option value="11:00">30</option>
+                        <option value="11:00">35</option>
+                        <option value="11:00">40</option>
+                        <option value="11:00">45</option>
+                        <option value="11:00">50</option>
+                        <option value="11:00">55</option>
+                      </select>
+                    </td>
+            </tr>
+            <tr>
+                <td style="color: #000;">3</td>
+                <td style="color: #000;">
+                    <label for="times">Hours:</label>
+                    <select name="times" id="times">
+                        <option value="6">1</option>
+                        <option value="7">2</option>
+                        <option value="8">3</option>
+                        <option value="9">4</option>
+                        <option value="10">5</option>
+                        <option value="11">6</option>
+                        <option value="12">7</option>
+                        <option value="13">8</option>
+                        <option value="14">9</option>
+                        <option value="15">10</option>
+                        <option value="16">11</option>
+                        <option value="17">12</option>
+                        <option value="18">13</option>
+                        <option value="19">14</option>
+                        <option value="20">15</option>
+                        <option value="21">16</option>
+                        <option value="22">17</option>
+                        <option value="23">18</option>
+                        <option value="24">19</option>
+                        <option value="1">20</option>
+                        <option value="2">21</option>
+                        <option value="3">22</option>
+                        <option value="4">23</option>
+                        <option value="5">24</option>
+                    </select>
+                    <label for="times">Minutes:</label>
+                    <select name="times" id="times">
+                        <option value="11:00">00</option>
+                        <option value="8:00">05</option>
+                        <option value="9:00">10</option>
+                        <option value="10:00">15</option>
+                        <option value="11:00">20</option>
+                        <option value="11:00">25</option>
+                        <option value="11:00">30</option>
+                        <option value="11:00">35</option>
+                        <option value="11:00">40</option>
+                        <option value="11:00">45</option>
+                        <option value="11:00">50</option>
+                        <option value="11:00">55</option>
+                      </select>
+                    </td>
+            </tr>
+            <tr>
+                <td style="color: #000;">4</td>
+                <td style="color: #000;">
+                    <label for="times">Hours:</label>
+                    <select name="times" id="times">
+                        <option value="6">1</option>
+                        <option value="7">2</option>
+                        <option value="8">3</option>
+                        <option value="9">4</option>
+                        <option value="10">5</option>
+                        <option value="11">6</option>
+                        <option value="12">7</option>
+                        <option value="13">8</option>
+                        <option value="14">9</option>
+                        <option value="15">10</option>
+                        <option value="16">11</option>
+                        <option value="17">12</option>
+                        <option value="18">13</option>
+                        <option value="19">14</option>
+                        <option value="20">15</option>
+                        <option value="21">16</option>
+                        <option value="22">17</option>
+                        <option value="23">18</option>
+                        <option value="24">19</option>
+                        <option value="1">20</option>
+                        <option value="2">21</option>
+                        <option value="3">22</option>
+                        <option value="4">23</option>
+                        <option value="5">24</option>
+                    </select>
+                    <label for="times">Minutes:</label>
+                    <select name="times" id="times">
+                        <option value="11:00">00</option>
+                        <option value="8:00">05</option>
+                        <option value="9:00">10</option>
+                        <option value="10:00">15</option>
+                        <option value="11:00">20</option>
+                        <option value="11:00">25</option>
+                        <option value="11:00">30</option>
+                        <option value="11:00">35</option>
+                        <option value="11:00">40</option>
+                        <option value="11:00">45</option>
+                        <option value="11:00">50</option>
+                        <option value="11:00">55</option>
+                      </select>
+                    </td>
+            </tr>
+            <tr>
+                <td style="color: #000;">5</td>
+                <td style="color: #000;">
+                    <label for="times">Hours:</label>
+                    <select name="times" id="times">
+                        <option value="6">1</option>
+                        <option value="7">2</option>
+                        <option value="8">3</option>
+                        <option value="9">4</option>
+                        <option value="10">5</option>
+                        <option value="11">6</option>
+                        <option value="12">7</option>
+                        <option value="13">8</option>
+                        <option value="14">9</option>
+                        <option value="15">10</option>
+                        <option value="16">11</option>
+                        <option value="17">12</option>
+                        <option value="18">13</option>
+                        <option value="19">14</option>
+                        <option value="20">15</option>
+                        <option value="21">16</option>
+                        <option value="22">17</option>
+                        <option value="23">18</option>
+                        <option value="24">19</option>
+                        <option value="1">20</option>
+                        <option value="2">21</option>
+                        <option value="3">22</option>
+                        <option value="4">23</option>
+                        <option value="5">24</option>
+                    </select>
+                    <label for="times">Minutes:</label>
+                    <select name="times" id="times">
+                        <option value="11:00">00</option>
+                        <option value="8:00">05</option>
+                        <option value="9:00">10</option>
+                        <option value="10:00">15</option>
+                        <option value="11:00">20</option>
+                        <option value="11:00">25</option>
+                        <option value="11:00">30</option>
+                        <option value="11:00">35</option>
+                        <option value="11:00">40</option>
+                        <option value="11:00">45</option>
+                        <option value="11:00">50</option>
+                        <option value="11:00">55</option>
+                      </select>
+                    </td>
+            </tr>
+            <tr>
+                <td style="color: #000;">6</td>
+                <td style="color: #000;">
+                    <label for="times">Hours:</label>
+                    <select name="times" id="times">
+                        <option value="6">1</option>
+                        <option value="7">2</option>
+                        <option value="8">3</option>
+                        <option value="9">4</option>
+                        <option value="10">5</option>
+                        <option value="11">6</option>
+                        <option value="12">7</option>
+                        <option value="13">8</option>
+                        <option value="14">9</option>
+                        <option value="15">10</option>
+                        <option value="16">11</option>
+                        <option value="17">12</option>
+                        <option value="18">13</option>
+                        <option value="19">14</option>
+                        <option value="20">15</option>
+                        <option value="21">16</option>
+                        <option value="22">17</option>
+                        <option value="23">18</option>
+                        <option value="24">19</option>
+                        <option value="1">20</option>
+                        <option value="2">21</option>
+                        <option value="3">22</option>
+                        <option value="4">23</option>
+                        <option value="5">24</option>
+                    </select>
+                    <label for="times">Minutes:</label>
+                    <select name="times" id="times">
+                        <option value="11:00">00</option>
+                        <option value="8:00">05</option>
+                        <option value="9:00">10</option>
+                        <option value="10:00">15</option>
+                        <option value="11:00">20</option>
+                        <option value="11:00">25</option>
+                        <option value="11:00">30</option>
+                        <option value="11:00">35</option>
+                        <option value="11:00">40</option>
+                        <option value="11:00">45</option>
+                        <option value="11:00">50</option>
+                        <option value="11:00">55</option>
+                      </select>
+                    </td>
+            </tr>
+            <tr>
+                <td style="color: #000;">7</td>
+                <td style="color: #000;">
+                    <label for="times">Hours:</label>
+                    <select name="times" id="times">
+                        <option value="6">1</option>
+                        <option value="7">2</option>
+                        <option value="8">3</option>
+                        <option value="9">4</option>
+                        <option value="10">5</option>
+                        <option value="11">6</option>
+                        <option value="12">7</option>
+                        <option value="13">8</option>
+                        <option value="14">9</option>
+                        <option value="15">10</option>
+                        <option value="16">11</option>
+                        <option value="17">12</option>
+                        <option value="18">13</option>
+                        <option value="19">14</option>
+                        <option value="20">15</option>
+                        <option value="21">16</option>
+                        <option value="22">17</option>
+                        <option value="23">18</option>
+                        <option value="24">19</option>
+                        <option value="1">20</option>
+                        <option value="2">21</option>
+                        <option value="3">22</option>
+                        <option value="4">23</option>
+                        <option value="5">24</option>
+                    </select>
+                    <label for="times">Minutes:</label>
+                    <select name="times" id="times">
+                        <option value="11:00">00</option>
+                        <option value="8:00">05</option>
+                        <option value="9:00">10</option>
+                        <option value="10:00">15</option>
+                        <option value="11:00">20</option>
+                        <option value="11:00">25</option>
+                        <option value="11:00">30</option>
+                        <option value="11:00">35</option>
+                        <option value="11:00">40</option>
+                        <option value="11:00">45</option>
+                        <option value="11:00">50</option>
+                        <option value="11:00">55</option>
+                      </select>
+                    </td>
+            </tr>
+            <tr>
+                <td style="color: #000;">8</td>
+                <td style="color: #000;">
+                    <label for="times">Hours:</label>
+                    <select name="times" id="times">
+                        <option value="6">1</option>
+                        <option value="7">2</option>
+                        <option value="8">3</option>
+                        <option value="9">4</option>
+                        <option value="10">5</option>
+                        <option value="11">6</option>
+                        <option value="12">7</option>
+                        <option value="13">8</option>
+                        <option value="14">9</option>
+                        <option value="15">10</option>
+                        <option value="16">11</option>
+                        <option value="17">12</option>
+                        <option value="18">13</option>
+                        <option value="19">14</option>
+                        <option value="20">15</option>
+                        <option value="21">16</option>
+                        <option value="22">17</option>
+                        <option value="23">18</option>
+                        <option value="24">19</option>
+                        <option value="1">20</option>
+                        <option value="2">21</option>
+                        <option value="3">22</option>
+                        <option value="4">23</option>
+                        <option value="5">24</option>
+                    </select>
+                    <label for="times">Minutes:</label>
+                    <select name="times" id="times">
+                        <option value="11:00">00</option>
+                        <option value="8:00">05</option>
+                        <option value="9:00">10</option>
+                        <option value="10:00">15</option>
+                        <option value="11:00">20</option>
+                        <option value="11:00">25</option>
+                        <option value="11:00">30</option>
+                        <option value="11:00">35</option>
+                        <option value="11:00">40</option>
+                        <option value="11:00">45</option>
+                        <option value="11:00">50</option>
+                        <option value="11:00">55</option>
+                      </select>
+                    </td>
+            </tr>
+            <tr>
+                <td style="color: #000;">9</td>
+                <td style="color: #000;">
+                    <label for="times">Hours:</label>
+                    <select name="times" id="times">
+                        <option value="6">1</option>
+                        <option value="7">2</option>
+                        <option value="8">3</option>
+                        <option value="9">4</option>
+                        <option value="10">5</option>
+                        <option value="11">6</option>
+                        <option value="12">7</option>
+                        <option value="13">8</option>
+                        <option value="14">9</option>
+                        <option value="15">10</option>
+                        <option value="16">11</option>
+                        <option value="17">12</option>
+                        <option value="18">13</option>
+                        <option value="19">14</option>
+                        <option value="20">15</option>
+                        <option value="21">16</option>
+                        <option value="22">17</option>
+                        <option value="23">18</option>
+                        <option value="24">19</option>
+                        <option value="1">20</option>
+                        <option value="2">21</option>
+                        <option value="3">22</option>
+                        <option value="4">23</option>
+                        <option value="5">24</option>
+                    </select>
+                    <label for="times">Minutes:</label>
+                    <select name="times" id="times">
+                        <option value="11:00">00</option>
+                        <option value="8:00">05</option>
+                        <option value="9:00">10</option>
+                        <option value="10:00">15</option>
+                        <option value="11:00">20</option>
+                        <option value="11:00">25</option>
+                        <option value="11:00">30</option>
+                        <option value="11:00">35</option>
+                        <option value="11:00">40</option>
+                        <option value="11:00">45</option>
+                        <option value="11:00">50</option>
+                        <option value="11:00">55</option>
+                      </select>
+                    </td>
+            </tr>
+            <tr>
+                <td style="color: #000;">10</td>
+                <td style="color: #000;">
+                    <label for="times">Hours:</label>
+                    <select name="times" id="times">
+                        <option value="6">1</option>
+                        <option value="7">2</option>
+                        <option value="8">3</option>
+                        <option value="9">4</option>
+                        <option value="10">5</option>
+                        <option value="11">6</option>
+                        <option value="12">7</option>
+                        <option value="13">8</option>
+                        <option value="14">9</option>
+                        <option value="15">10</option>
+                        <option value="16">11</option>
+                        <option value="17">12</option>
+                        <option value="18">13</option>
+                        <option value="19">14</option>
+                        <option value="20">15</option>
+                        <option value="21">16</option>
+                        <option value="22">17</option>
+                        <option value="23">18</option>
+                        <option value="24">19</option>
+                        <option value="1">20</option>
+                        <option value="2">21</option>
+                        <option value="3">22</option>
+                        <option value="4">23</option>
+                        <option value="5">24</option>
+                    </select>
+                    <label for="times">Minutes:</label>
+                    <select name="times" id="times">
+                        <option value="11:00">00</option>
+                        <option value="8:00">05</option>
+                        <option value="9:00">10</option>
+                        <option value="10:00">15</option>
+                        <option value="11:00">20</option>
+                        <option value="11:00">25</option>
+                        <option value="11:00">30</option>
+                        <option value="11:00">35</option>
+                        <option value="11:00">40</option>
+                        <option value="11:00">45</option>
+                        <option value="11:00">50</option>
+                        <option value="11:00">55</option>
+                      </select>
+                    </td>
+            </tr>
+        </table>
+    </div>
+
+    
+    <button class="button button1">Log In</button>
+    <button class="button button1">Shuffle</button>
+</body>
+<style>
+    
+    .button1 {
+        background-color: white;
+        color: black;
+        border: 2px solid #FFB6C1;
+      }
+      
+      .button1:hover {
+        background-color: #FFB6C1;
+        color: white;
+      }
+    </style>
+</html>
