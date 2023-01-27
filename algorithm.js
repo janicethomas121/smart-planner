@@ -1,6 +1,6 @@
 // declare variables for data storage
 let myTasks;
-let storageArray = [];
+let storageArray = [24];
 let schedule1 = []; //user inputs
 let schedule2 = []; //optimized
 
@@ -107,11 +107,18 @@ function organizeSchedule(){
             if (schedule1[i] == "null"){
                 break loop2;
             } else if (schedule1[i] == j){
-                schedule2.splice(i,0,storageArray[i]);
+                schedule2.splice(i,0,storageArray[j]);
             } else {
                 console.log("test");
+                // set schedule 2 to schedule 1's / storage array's length
                 break loop2;
             }
+        }
+    }
+
+    for (let i = 0; i < schedule2.length; i++){
+        for (let j = 0; j < storageArray.length; j++){
+            schedule2[i] = storageArray[j];
         }
     }
     }
