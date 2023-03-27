@@ -1,6 +1,6 @@
 // declare variables for data storage
 let myTasks;
-let storageArray = [24];
+let storageArray = new Array (24);
 let schedule1 = []; //user inputs
 let schedule2 = []; //optimized
 
@@ -100,23 +100,27 @@ $(document).ready(function() {
 
 //organize schedule using user's preexisting schedule and to do list with times
 function organizeSchedule(){
+    //add activities to storageArray in ascending order (1-24)
     loop1:
     for(let i = 0; i < schedule1.length; i++){
+        console.log("works");
         loop2:
         for (let j = 1; j <= 24; j++){
             if (schedule1[i] == "null"){
                 break loop2;
             } else if (schedule1[i] == j){
-                schedule2.splice(i,0,storageArray[j]);
+                storageArray.splice(i,0,schedule1[i]);
             } else {
                 console.log("test");
-                // set schedule 2 to schedule 1's / storage array's length
-                break loop2;
             }
         }
     }
-
+    var len = storageArray.length;
+    schedule2 = [len];
+    console.log(len);
+    loop1:
     for (let i = 0; i < schedule2.length; i++){
+        loop2:
         for (let j = 0; j < storageArray.length; j++){
             schedule2[i] = storageArray[j];
         }
