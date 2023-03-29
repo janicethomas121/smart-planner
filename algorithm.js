@@ -8,6 +8,13 @@ const jquery = require('jquery');
 // upload JavaScript library 'MomentJS' for easier displaying of time and date
 var moment = require('moment');
 
+//jQuery test
+$(document).ready(function(){
+    $("button").click(function(){
+        $("h1").hide();
+    });
+});
+
 // using moment to get current time
 var time = parseInt(moment().format('HH'));
 console.log(time);
