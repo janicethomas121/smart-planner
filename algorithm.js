@@ -1,4 +1,8 @@
 // declare variables for data storage
+var http = require('http')
+var fs = require('fs')
+const EventEmitter = require('events');
+
 let myTasks;
 let storageArray = new Array (24);
 let schedule1 = []; //user inputs
@@ -8,12 +12,11 @@ const jquery = require('jquery');
 // upload JavaScript library 'MomentJS' for easier displaying of time and date
 var moment = require('moment');
 
-//jQuery test
-$(document).ready(function(){
-    $("button").click(function(){
-        $("h1").hide();
-    });
+fs.readFile('./index.html', function() {
+    console.log("node is the problem");
 });
+
+//jQuery test
 
 // using moment to get current time
 var time = parseInt(moment().format('HH'));

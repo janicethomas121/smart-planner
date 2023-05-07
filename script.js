@@ -24,5 +24,6 @@
     var moment = require('moment');
 
     const jquery = require('jquery');
-    const lol = document.querySelector('.button');
+    //const lol = document.querySelector('.button');
+
     
