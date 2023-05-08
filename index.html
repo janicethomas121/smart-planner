@@ -8,13 +8,54 @@
     <body>
         <!-- <script type="text/JavaScript" src="js/algorithm.js"></script> -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+        <script src="./algorithm.js"></script>
         <script src="./assets/js/algorithm.js"></script>
         <script src="algorithm.js"></script>
     <h1>Welcome to your Smart Planner!</h1>
     <center>What's your schedule today?</center>
     <center>
-        <button class="button button1">Generate Schedule</button>
+        <button id="gb" class="button button1">Generate Schedule</button>
     </center>
+    <script>
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+        apiKey: "AIzaSyC-ZgVdZbBNe1pWOYMevMKlGOuSP0IkmtI",
+        authDomain: "smart-planner-11b83.firebaseapp.com",
+        databaseURL: "https://smart-planner-11b83-default-rtdb.firebaseio.com",
+        projectId: "smart-planner-11b83",
+        storageBucket: "smart-planner-11b83.appspot.com",
+        messagingSenderId: "125716698291",
+        appId: "1:125716698291:web:30eb4816403a66800bccc6",
+        measurementId: "G-XP6LY1ZJKJ"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        const actDB = firebase.database().ref("activityForm");
+
+        const getElementVal = (id) => {
+            return document.getElementById(id).value;
+        };
+        const saveData = (name) => {
+            var myDat = actDB.push();
+            myDat.set({
+                name : name
+            })
+        };
+        function sendRequest(e){
+            e.preventDefault();
+
+            alert("sending request");
+            var name = getElementVal("activity1");
+            // var startH = getElementVal("h1");
+            // var startM = getElementVal("m1");
+            // var durH = getElementVal("h11");
+            // var durM = getElementVal("m11");
+            console.log(name);
+            saveData(name);
+        }
+        document.getElementById("gb").addEventListener("click", sendRequest);
+    </script>
     <div style = "overflow-x:auto;">
         <table> 
             <colgroup>
@@ -26,7 +67,102 @@
                 <th style="color: #000;">Duration</th>
             </tr>
             <tr>
-                <th style="color: #000;"></th>
+                <th style="color: #000;">
+                    <input type="text" id="activity1" name="activity1">
+                </th>
+                <td style="color: #000;">
+                    <label id="h1" for="times">Hour:</label>
+                    <select name="times" id="times">
+                      <option value="6">1</option>
+                      <option value="7">2</option>
+                      <option value="8">3</option>
+                      <option value="9">4</option>
+                      <option value="10">5</option>
+                      <option value="11">6</option>
+                      <option value="12">7</option>
+                      <option value="13">8</option>
+                      <option value="14">9</option>
+                      <option value="15">10</option>
+                      <option value="16">11</option>
+                      <option value="17">12</option>
+                      <option value="18">13</option>
+                      <option value="19">14</option>
+                      <option value="20">15</option>
+                      <option value="21">16</option>
+                      <option value="22">17</option>
+                      <option value="23">18</option>
+                      <option value="24">19</option>
+                      <option value="1">20</option>
+                      <option value="2">21</option>
+                      <option value="3">22</option>
+                      <option value="4">23</option>
+                      <option value="5">24</option>
+                    </select>
+                    <label id="m1" for="times">Minutes:</label>
+                    <select name="times" id="times">
+                      <option value="11:00">00</option>
+                      <option value="8:00">05</option>
+                      <option value="9:00">10</option>
+                      <option value="10:00">15</option>
+                      <option value="11:00">20</option>
+                      <option value="11:00">25</option>
+                      <option value="11:00">30</option>
+                      <option value="11:00">35</option>
+                      <option value="11:00">40</option>
+                      <option value="11:00">45</option>
+                      <option value="11:00">50</option>
+                      <option value="11:00">55</option>
+                    </select>
+                </td>
+                <td style="color: #000;">
+                    <label id="h11" for="times">Hours:</label>
+                    <select name="times" id="times">
+                        <option value="6">1</option>
+                        <option value="7">2</option>
+                        <option value="8">3</option>
+                        <option value="9">4</option>
+                        <option value="10">5</option>
+                        <option value="11">6</option>
+                        <option value="12">7</option>
+                        <option value="13">8</option>
+                        <option value="14">9</option>
+                        <option value="15">10</option>
+                        <option value="16">11</option>
+                        <option value="17">12</option>
+                        <option value="18">13</option>
+                        <option value="19">14</option>
+                        <option value="20">15</option>
+                        <option value="21">16</option>
+                        <option value="22">17</option>
+                        <option value="23">18</option>
+                        <option value="24">19</option>
+                        <option value="1">20</option>
+                        <option value="2">21</option>
+                        <option value="3">22</option>
+                        <option value="4">23</option>
+                        <option value="5">24</option>
+                    </select>
+                    <label id="m11" for="times">Minutes:</label>
+                    <select name="times" id="times">
+                        <option value="11:00">00</option>
+                        <option value="8:00">05</option>
+                        <option value="9:00">10</option>
+                        <option value="10:00">15</option>
+                        <option value="11:00">20</option>
+                        <option value="11:00">25</option>
+                        <option value="11:00">30</option>
+                        <option value="11:00">35</option>
+                        <option value="11:00">40</option>
+                        <option value="11:00">45</option>
+                        <option value="11:00">50</option>
+                        <option value="11:00">55</option>
+                      </select>
+                </td>
+            </tr>
+            <tr>
+                <th style="color: #000;">
+                    <input type="text" id="activity2" name="activity2">
+                </th>
                 <td style="color: #000;">
                     <label for="times">Hour:</label>
                     <select name="times" id="times">
@@ -117,7 +253,9 @@
                 </td>
             </tr>
             <tr>
-                <th style="color: #000;"></th>
+                <th style="color: #000;">
+                    <input type="text" id="activity3" name="activity3">
+                </th>
                 <td style="color: #000;">
                     <label for="times">Hour:</label>
                     <select name="times" id="times">
@@ -208,7 +346,9 @@
                 </td>
             </tr>
             <tr>
-                <th style="color: #000;"></th>
+                <th style="color: #000;">
+                    <input type="text" id="activity4" name="activity4">
+                </th>
                 <td style="color: #000;">
                     <label for="times">Hour:</label>
                     <select name="times" id="times">
@@ -299,7 +439,9 @@
                 </td>
             </tr>
             <tr>
-                <th style="color: #000;"></th>
+                <th style="color: #000;">
+                    <input type="text" id="activity5" name="activity5">
+                </th>
                 <td style="color: #000;">
                     <label for="times">Hour:</label>
                     <select name="times" id="times">
@@ -390,7 +532,8 @@
                 </td>
             </tr>
             <tr>
-                <th style="color: #000;"></th>
+                <th style="color: #000;">
+                    <input type="text" id="activity6" name="activity6"></th>
                 <td style="color: #000;">
                     <label for="times">Hour:</label>
                     <select name="times" id="times">
@@ -481,7 +624,9 @@
                 </td>
             </tr>
             <tr>
-                <th style="color: #000;"></th>
+                <th style="color: #000;">
+                    <input type="text" id="activity7" name="activity7">
+                </th>
                 <td style="color: #000;">
                     <label for="times">Hour:</label>
                     <select name="times" id="times">
@@ -572,7 +717,9 @@
                 </td>
             </tr>
             <tr>
-                <th style="color: #000;"></th>
+                <th style="color: #000;">
+                    <input type="text" id="activity8" name="activity8">
+                </th>
                 <td style="color: #000;">
                     <label for="times">Hour:</label>
                     <select name="times" id="times">
@@ -663,7 +810,9 @@
                 </td>
             </tr>
             <tr>
-                <th style="color: #000;"></th>
+                <th style="color: #000;">
+                    <input type="text" id="activity9" name="activity9">
+                </th>
                 <td style="color: #000;">
                     <label for="times">Hour:</label>
                     <select name="times" id="times">
@@ -754,98 +903,9 @@
                 </td>
             </tr>
             <tr>
-                <th style="color: #000;"></th>
-                <td style="color: #000;">
-                    <label for="times">Hour:</label>
-                    <select name="times" id="times">
-                      <option value="6">1</option>
-                      <option value="7">2</option>
-                      <option value="8">3</option>
-                      <option value="9">4</option>
-                      <option value="10">5</option>
-                      <option value="11">6</option>
-                      <option value="12">7</option>
-                      <option value="13">8</option>
-                      <option value="14">9</option>
-                      <option value="15">10</option>
-                      <option value="16">11</option>
-                      <option value="17">12</option>
-                      <option value="18">13</option>
-                      <option value="19">14</option>
-                      <option value="20">15</option>
-                      <option value="21">16</option>
-                      <option value="22">17</option>
-                      <option value="23">18</option>
-                      <option value="24">19</option>
-                      <option value="1">20</option>
-                      <option value="2">21</option>
-                      <option value="3">22</option>
-                      <option value="4">23</option>
-                      <option value="5">24</option>
-                    </select>
-                    <label for="times">Minutes:</label>
-                    <select name="times" id="times">
-                      <option value="11:00">00</option>
-                      <option value="8:00">05</option>
-                      <option value="9:00">10</option>
-                      <option value="10:00">15</option>
-                      <option value="11:00">20</option>
-                      <option value="11:00">25</option>
-                      <option value="11:00">30</option>
-                      <option value="11:00">35</option>
-                      <option value="11:00">40</option>
-                      <option value="11:00">45</option>
-                      <option value="11:00">50</option>
-                      <option value="11:00">55</option>
-                    </select>
-                </td>
-                <td style="color: #000;">
-                    <label for="times">Hours:</label>
-                    <select name="times" id="times">
-                        <option value="6">1</option>
-                        <option value="7">2</option>
-                        <option value="8">3</option>
-                        <option value="9">4</option>
-                        <option value="10">5</option>
-                        <option value="11">6</option>
-                        <option value="12">7</option>
-                        <option value="13">8</option>
-                        <option value="14">9</option>
-                        <option value="15">10</option>
-                        <option value="16">11</option>
-                        <option value="17">12</option>
-                        <option value="18">13</option>
-                        <option value="19">14</option>
-                        <option value="20">15</option>
-                        <option value="21">16</option>
-                        <option value="22">17</option>
-                        <option value="23">18</option>
-                        <option value="24">19</option>
-                        <option value="1">20</option>
-                        <option value="2">21</option>
-                        <option value="3">22</option>
-                        <option value="4">23</option>
-                        <option value="5">24</option>
-                    </select>
-                    <label for="times">Minutes:</label>
-                    <select name="times" id="times">
-                        <option value="11:00">00</option>
-                        <option value="8:00">05</option>
-                        <option value="9:00">10</option>
-                        <option value="10:00">15</option>
-                        <option value="11:00">20</option>
-                        <option value="11:00">25</option>
-                        <option value="11:00">30</option>
-                        <option value="11:00">35</option>
-                        <option value="11:00">40</option>
-                        <option value="11:00">45</option>
-                        <option value="11:00">50</option>
-                        <option value="11:00">55</option>
-                      </select>
-                </td>
-            </tr>
-            <tr>
-                <th style="color: #000;"></th>
+                <th style="color: #000;">
+                    <input type="text" id="activity10" name="activity10">
+                </th>
                 <td style="color: #000;">
                     <label for="times">Hour:</label>
                     <select name="times" id="times">
@@ -948,7 +1008,9 @@
                 <th style="color: #000;">Approximate Time Required</th>
             </tr>
             <tr>
-                <td style="color: #000;">1</td>
+                <td style="color: #000;">
+                    <input type="text" id="todo1" name="todo1">
+                </td>
                 <td style="color: #000;">
                     <label for="times">Hours:</label>
                     <select name="times" id="times">
@@ -995,7 +1057,9 @@
                 </td>
             </tr>
             <tr>
-                <td style="color: #000;">2</td>
+                <td style="color: #000;">
+                    <input type="text" id="todo2" name="todo2">
+                </td>
                 <td style="color: #000;">
                     <label for="times">Hours:</label>
                     <select name="times" id="times">
@@ -1042,7 +1106,9 @@
                     </td>
             </tr>
             <tr>
-                <td style="color: #000;">3</td>
+                <td style="color: #000;">
+                    <input type="text" id="todo3" name="todo3">
+                </td>
                 <td style="color: #000;">
                     <label for="times">Hours:</label>
                     <select name="times" id="times">
@@ -1089,7 +1155,9 @@
                     </td>
             </tr>
             <tr>
-                <td style="color: #000;">4</td>
+                <td style="color: #000;">
+                    <input type="text" id="todo4" name="todo4">
+                </td>
                 <td style="color: #000;">
                     <label for="times">Hours:</label>
                     <select name="times" id="times">
@@ -1136,7 +1204,9 @@
                     </td>
             </tr>
             <tr>
-                <td style="color: #000;">5</td>
+                <td style="color: #000;">
+                    <input type="text" id="todo5" name="todo5">
+                </td>
                 <td style="color: #000;">
                     <label for="times">Hours:</label>
                     <select name="times" id="times">
@@ -1183,7 +1253,9 @@
                     </td>
             </tr>
             <tr>
-                <td style="color: #000;">6</td>
+                <td style="color: #000;">
+                    <input type="text" id="todo6" name="todo6">
+                </td>
                 <td style="color: #000;">
                     <label for="times">Hours:</label>
                     <select name="times" id="times">
@@ -1230,7 +1302,9 @@
                     </td>
             </tr>
             <tr>
-                <td style="color: #000;">7</td>
+                <td style="color: #000;">
+                    <input type="text" id="todo7" name="todo7">
+                </td>
                 <td style="color: #000;">
                     <label for="times">Hours:</label>
                     <select name="times" id="times">
@@ -1277,7 +1351,9 @@
                     </td>
             </tr>
             <tr>
-                <td style="color: #000;">8</td>
+                <td style="color: #000;">
+                    <input type="text" id="todo8" name="todo8">
+                </td>
                 <td style="color: #000;">
                     <label for="times">Hours:</label>
                     <select name="times" id="times">
@@ -1324,7 +1400,9 @@
                     </td>
             </tr>
             <tr>
-                <td style="color: #000;">9</td>
+                <td style="color: #000;">
+                    <input type="text" id="todo9" name="todo9">
+                </td>
                 <td style="color: #000;">
                     <label for="times">Hours:</label>
                     <select name="times" id="times">
@@ -1371,7 +1449,9 @@
                     </td>
             </tr>
             <tr>
-                <td style="color: #000;">10</td>
+                <td style="color: #000;">
+                    <input type="text" id="todo10" name="todo10">
+                </td>
                 <td style="color: #000;">
                     <label for="times">Hours:</label>
                     <select name="times" id="times">
@@ -1419,9 +1499,6 @@
             </tr>
         </table>
     </div>
-
-    
-    <button class="button button1">Log In</button>
     <button class="button button1">Shuffle</button>
 </body>
 <style>

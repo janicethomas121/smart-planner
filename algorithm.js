@@ -16,29 +16,34 @@ const db = firebase.firestore();
 const New = db.collection("New");
 module.exports = New;
 
-var http = require('http')
-var fs = require('fs')
+const http = require('http')
+const fs = require('fs')
 const EventEmitter = require('events');
 const emitter = new EventEmitter();
 
+fs.readFile('./index.html', function() {
+    console.log("reading file...");
+});
+
+
+/*
 emitter.on('messageLogged', function(){
     console.log('Listener called')
 });
 
 emitter.emit('messageLogged');
 
+
 let myTasks;
 let storageArray = new Array (24);
 let schedule1 = []; //user inputs
 let schedule2 = []; //optimized
-
+*/
 const jquery = require('jquery');
 // upload JavaScript library 'MomentJS' for easier displaying of time and date
-//var moment = require('moment');
+const moment = require('moment');
 
-fs.readFile('./index.html', function() {
-    console.log("node is the problem");
-});
+
 
 
 
