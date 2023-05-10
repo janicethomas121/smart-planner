@@ -73,6 +73,8 @@
             console.log(names, startH, startM, durH, durM, todos, tH, tM);
             saveData(names, startH, startM, durH, durM, todos, tH, tM);
 
+
+            //adding all inputted activities into an ordered list by starting time (earlier --> latest)
             const actList = [];
             for (let i = 0; i < names.length; i++){
                 if (names[i] != ""){
@@ -89,9 +91,29 @@
                     j = j - 1;
                 }
                 actList[j + 1] = key;
-                console.log(actList);
             }
             console.log(actList);
+
+            //adding all inputted to do list items into an ordered list by duration (longest --> shortest)
+            const todoList = [];
+            for (let i = 0; i < todos.length; i++){
+                if(todos[i] != ""){
+                    const mins = (parseInt(tH[i])*60) + parseInt(tM[i]);
+                    todoList.push([todos[i], mins]);
+                }
+            }
+
+            let size = todoList.length;
+            for (let step = 1; step < size; step++){
+                let key = todoList[step];
+                let j = step - 1;
+                while (j >= 0 && key[1] > todoList[j][1]) {
+                    todoList[j + 1] = todoList[j];
+                    --j;
+                }
+                todoList[j + 1] = key;
+            }
+            console.log(todoList);
         }
 
         document.getElementById("gb").addEventListener("click", sendRequest);
