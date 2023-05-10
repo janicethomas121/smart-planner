@@ -79,7 +79,15 @@
             for (let i = 0; i < names.length; i++){
                 if (names[i] != ""){
                     const hours = parseInt(startH[i]);
-                    actList.push([names[i], hours, startM[i], durH[i], durM[i]]);
+                    const eHours = hours + parseInt(durH[i]);
+                    const eMins = parseInt(startM[i]) + parseInt(durM[i]);
+                    if (eMins[i] > 60){
+                        eHours += eMins / 60;
+                        eMins = eMins % 60;
+                    }
+                    const totalEMins = eHours*60 + parseInt(eMins[i]);
+                    const totalSMins = hours*60 + parseInt(startM[i]);
+                    actList.push([names[i], hours, startM[i], totalSMins, durH[i], durM[i], eHours[i], eMins[i]], totalEMins);
                 }
             }
             let i, j, key;
@@ -112,6 +120,17 @@
                     --j;
                 }
                 todoList[j + 1] = key;
+            }
+            console.log(todoList);
+
+            let newList = [];
+            for (let i = 0; i < actList.length-1; i++){
+                let gap = actList[i+1][3] - actList[i][8];
+                for (let j = 0; j < todoList.length; j++){
+                    if (gap > todoList[j][1]){
+                        newList.push(todoList[j]);
+                    }
+                }
             }
             console.log(todoList);
         }
