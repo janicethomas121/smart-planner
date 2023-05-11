@@ -144,21 +144,30 @@
                 }
             }
             console.log(newList);
+            document.getElementById("a1").innerHTML = newList[0][0];
+            document.getElementById("s1").innerHTML = newList[0][1] + ":" + newList[0][2];
+            document.getElementById("e1").innerHTML = newList[0][5] + ":" + newList[0][6];
             
         }
         function showResult() {
             var x = document.getElementById("result");
+            // var count = 0;
+            // if(x.style.display === "none" && count == 0){
+            //     x.style.display = "block";
+            //     count++;
+            // }
             if (x.style.display === "none") {
                 x.style.display = "block";
-            } else {
+            }
+            else {
                 x.style.display = "none";
             }
         }
         document.getElementById("gb").addEventListener("click", showResult);
         document.getElementById("gb").addEventListener("click", sendRequest);
     </script>
-    <div id="result">
-        <table> 
+    <div>
+        <table id="result" WIDTH = 400 HEIGHT = 500> 
             <colgroup>
                 <col span="3" style="background-color: #D6EEEE">
             </colgroup>
@@ -168,13 +177,108 @@
             <th style="color: #000;">End Time</th>
         </tr>
         <tr>
-            <td>Filler</td>
-            <td>Filler</td>
-            <td>Filler</td>
+            <td id = "a1"></td>
+            <td id = "s1"></td>
+            <td id = "e1"></td>
+        </tr>
+        <tr>
+            <td id = "a2"></td>
+            <td id = "s2"></td>
+            <td id = "e2"></td>
+        </tr>
+        <tr>
+            <td id = "a3"></td>
+            <td id = "s3"></td>
+            <td id = "e3"></td>
+        </tr>
+        <tr>
+            <td id = "a4"></td>
+            <td id = "s4"></td>
+            <td id = "e4"></td>
+        </tr>
+        <tr>
+            <td id = "a5"></td>
+            <td id = "s5"></td>
+            <td id = "e5"></td>
+        </tr>
+        <tr>
+            <td id = "a6"></td>
+            <td id = "s6"></td>
+            <td id = "e6"></td>
+        </tr>
+        <tr>
+            <td id = "a7"></td>
+            <td id = "s7"></td>
+            <td id = "e7"></td>
+        </tr>
+        <tr>
+            <td id = "a8"></td>
+            <td id = "s8"></td>
+            <td id = "e8"></td>
+        </tr>
+        <tr>
+            <td id = "a9"></td>
+            <td id = "s9"></td>
+            <td id = "e9"></td>
+        </tr>
+        <tr>
+            <td id = "a10"></td>
+            <td id = "s10"></td>
+            <td id = "e10"></td>
+        </tr>
+        <tr>
+            <td id = "a11"></td>
+            <td id = "s11"></td>
+            <td id = "e11"></td>
+        </tr>
+        <tr>
+            <td id = "a12"></td>
+            <td id = "s12"></td>
+            <td id = "e12"></td>
+        </tr>
+        <tr>
+            <td id = "a13"></td>
+            <td id = "s13"></td>
+            <td id = "e13"></td>
+        </tr>
+        <tr>
+            <td id = "a14"></td>
+            <td id = "s14"></td>
+            <td id = "e14"></td>
+        </tr>
+        <tr>
+            <td id = "a15"></td>
+            <td id = "s15"></td>
+            <td id = "e15"></td>
+        </tr>
+        <tr>
+            <td id = "a16"></td>
+            <td id = "s16"></td>
+            <td id = "e16"></td>
+        </tr>
+        <tr>
+            <td id = "a17"></td>
+            <td id = "s17"></td>
+            <td id = "e17"></td>
+        </tr>
+        <tr>
+            <td id = "a18"></td>
+            <td id = "s18"></td>
+            <td id = "e18"></td>
+        </tr>
+        <tr>
+            <td id = "a19"></td>
+            <td id = "s19"></td>
+            <td id = "e19"></td>
+        </tr>
+        <tr>
+            <td id = "a20"></td>
+            <td id = "s20"></td>
+            <td id = "e20"></td>
         </tr>
     </div>
-    <div style = "overflow-x:auto;">
-        <table> 
+    <div id = activitiesOG" style = "overflow-x:auto;">
+        <table id = "tab"> 
             <colgroup>
                 <col span="3" style="background-color: #D6EEEE">
             </colgroup>
@@ -1616,10 +1720,8 @@
             </tr>
         </table>
     </div>
-    <button class="button button1">Shuffle</button>
 </body>
 <style>
-    
     .button1 {
         background-color: white;
         color: black;
@@ -1630,5 +1732,8 @@
         background-color: #FFB6C1;
         color: white;
       }
+      #result{
+    margin-left: 425px;
+}
     </style>
 </html>
