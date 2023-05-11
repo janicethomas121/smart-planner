@@ -79,17 +79,19 @@
             for (let i = 0; i < names.length; i++){
                 if (names[i] != ""){
                     const hours = parseInt(startH[i]);
-                    const eHours = hours + parseInt(durH[i]);
-                    const eMins = parseInt(startM[i]) + parseInt(durM[i]);
-                    if (eMins[i] > 60){
+                    const eHours = hours + (parseInt(durH[i]));
+                    const eMins = (parseInt(startM[i])) + (parseInt(durM[i]));
+                    if (eMins > 60){
                         eHours += eMins / 60;
                         eMins = eMins % 60;
                     }
-                    const totalEMins = eHours*60 + parseInt(eMins[i]);
+                    const totalEMins = eHours*60 + eMins;
                     const totalSMins = hours*60 + parseInt(startM[i]);
-                    actList.push([names[i], hours, startM[i], totalSMins, durH[i], durM[i], eHours[i], eMins[i]], totalEMins);
+                    actList.push([names[i], hours, parseInt(startM[i]), totalSMins, parseInt(durH[i]), eHours, eMins, totalEMins]);
                 }
             }
+            actList.push(["end of day", 24, 59, 1439, 0, 0, 0, 0]);
+            actList.push(["beginning of day", 1, 0, 60, 0, 0, 0, 0]);
             let i, j, key;
             for (i = 1; i < actList.length; i++){
                 key = actList[i];
@@ -103,11 +105,11 @@
             console.log(actList);
 
             //adding all inputted to do list items into an ordered list by duration (longest --> shortest)
-            const todoList = [];
+            let todoList = [];
             for (let i = 0; i < todos.length; i++){
                 if(todos[i] != ""){
                     const mins = (parseInt(tH[i])*60) + parseInt(tM[i]);
-                    todoList.push([todos[i], mins]);
+                    todoList.push([todos[i], mins, parseInt(tH[i]), parseInt(tM[i])]);
                 }
             }
 
@@ -125,18 +127,52 @@
 
             let newList = [];
             for (let i = 0; i < actList.length-1; i++){
-                let gap = actList[i+1][3] - actList[i][8];
+                let gap = actList[i+1][3] - actList[i][7];
+                console.log(gap);
                 for (let j = 0; j < todoList.length; j++){
-                    if (gap > todoList[j][1]){
-                        newList.push(todoList[j]);
+                    if (gap >= todoList[j][1]){
+                        let tEndH = actList[i][5] + todoList[j][2];
+                        let tEndM = actList[i][6] + todoList[j][3];
+                        newList.push(todoList[j], actList[i+1]);
+                        todoList.splice(j, 1);
+                        break;
+                    }
+                    else {
+                        newList.push(actList[i+1]);
+                        break;
                     }
                 }
             }
-            console.log(todoList);
+            console.log(newList);
+            
         }
-
+        function showResult() {
+            var x = document.getElementById("result");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+        document.getElementById("gb").addEventListener("click", showResult);
         document.getElementById("gb").addEventListener("click", sendRequest);
     </script>
+    <div id="result">
+        <table> 
+            <colgroup>
+                <col span="3" style="background-color: #D6EEEE">
+            </colgroup>
+        <tr>
+            <th id="test" style="color: #000;">Suggested Activity</th>
+            <th style="color: #000;">Start Time</th>
+            <th style="color: #000;">End Time</th>
+        </tr>
+        <tr>
+            <td>Filler</td>
+            <td>Filler</td>
+            <td>Filler</td>
+        </tr>
+    </div>
     <div style = "overflow-x:auto;">
         <table> 
             <colgroup>
