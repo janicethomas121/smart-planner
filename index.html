@@ -79,11 +79,14 @@
             for (let i = 0; i < names.length; i++){
                 if (names[i] != ""){
                     const hours = parseInt(startH[i]);
-                    const eHours = hours + (parseInt(durH[i]));
-                    const eMins = (parseInt(startM[i])) + (parseInt(durM[i]));
+                    let eHours = hours + (parseInt(durH[i]));
+                    let eMins = (parseInt(startM[i])) + (parseInt(durM[i]));
                     if (eMins > 60){
                         eHours = eHours + (eMins/60);
                         eMins = eMins % 60;
+                    }
+                    if (eHours > 24){
+                        eHours = eHours - 24;
                     }
                     const totalEMins = eHours*60 + eMins;
                     const totalSMins = hours*60 + parseInt(startM[i]);
@@ -129,8 +132,14 @@
                 let gap = actList[i+1][1] - actList[i][8];
                 for (let j = 0; j < todoList.length; j++){
                     if (gap >= todoList[j][1]){
-                        let tSH = actList[i][6];
-                        let tSM = actList[i][7];
+                        let tSH;
+                        let tSM;
+                        if (actList[i][6] != 0){
+                            tSH = actList[i][6];
+                        } else {
+                            tSH = actList[i+1][6] - 1;
+                        }
+                        tSM = actList[i][7];
                         todoList[j].push(tSH, tSM);
                         todoList[j].push(parseInt(tH[i]), parseInt(tM[i]));
                         let tEndH = tSH + todoList[j][4];
