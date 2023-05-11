@@ -151,11 +151,6 @@
         }
         function showResult() {
             var x = document.getElementById("result");
-            // var count = 0;
-            // if(x.style.display === "none" && count == 0){
-            //     x.style.display = "block";
-            //     count++;
-            // }
             if (x.style.display === "none") {
                 x.style.display = "block";
             }
@@ -167,7 +162,7 @@
         document.getElementById("gb").addEventListener("click", sendRequest);
     </script>
     <div>
-        <table id="result" WIDTH = 400 HEIGHT = 500> 
+        <table id="result" style="display: none" WIDTH = 400 HEIGHT = 500> 
             <colgroup>
                 <col span="3" style="background-color: #D6EEEE">
             </colgroup>
