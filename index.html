@@ -13,7 +13,6 @@
         <script src="./assets/js/algorithm.js"></script>
         <script src="algorithm.js"></script>
     <h1>Welcome to your Smart Planner!</h1>
-    <center>What's your schedule today?</center>
     <center>
         <button id="gb" class="button button1">Generate Schedule</button>
     </center>
@@ -134,11 +133,7 @@
                     if (gap >= todoList[j][1]){
                         let tSH;
                         let tSM;
-                        if (actList[i][6] != 0){
-                            tSH = actList[i][6];
-                        } else {
-                            tSH = actList[i+1][6] - 1;
-                        }
+                        tSH = actList[i][6] + 1;
                         tSM = actList[i][7];
                         todoList[j].push(tSH, tSM);
                         todoList[j].push(parseInt(tH[i]), parseInt(tM[i]));
